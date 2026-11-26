@@ -963,25 +963,93 @@ tbody tr:nth-child(even) {
 .credits-list { padding-left: 1.5rem; line-height: 2; }
 .credits-list a { color: #254b3a; }
 .credits-list a:hover { color: #85551f; }
-.feedback-form { max-width: 40rem; margin-top: 2rem; }
-.form-field { margin-bottom: 1.25rem; }
-.form-field label { display: block; margin-bottom: 0.5rem; font-weight: 700; }
-.optional { font-weight: 400; color: #657168; }
-.form-field input,
-.form-field select,
-.form-field textarea {
+/* Feedback form — readable stacked fields on mobile and desktop. */
+.feedback-form {
+    width: 100%;
+    max-width: 42rem;
+    margin: 2rem 0 0;
+    padding: clamp(1.25rem, 4vw, 2.25rem);
+    border: 1px solid #e4ded2;
+    border-radius: 1rem;
+    background: #f7f4ee;
+    box-shadow: 0 12px 32px rgba(23, 40, 32, 0.07);
+}
+.feedback-form .form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.55rem;
+    min-width: 0;
+    margin-bottom: 1.4rem;
+}
+.feedback-form .form-field label {
+    display: block;
+    margin: 0;
+    color: #172820;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.feedback-form .optional {
+    color: #657168;
+    font-weight: 400;
+}
+.feedback-form .form-field input,
+.feedback-form .form-field select,
+.feedback-form .form-field textarea {
     display: block;
     width: 100%;
-    min-height: 2.9rem;
-    padding: 0.7rem;
-    border: 1px solid #8b998e;
-    border-radius: 0.2rem;
-    background: #fff;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 3.1rem;
+    padding: 0.8rem 0.95rem;
+    border: 1px solid #b4bcb2;
+    border-radius: 0.5rem;
+    background-color: #fff;
     color: #172820;
     font: inherit;
+    line-height: 1.5;
+    box-sizing: border-box;
 }
-.form-field textarea { resize: vertical; }
-.form-status { margin-top: 1rem; color: #254b3a; font-weight: 600; }
+.feedback-form .form-field textarea {
+    min-height: 9rem;
+    resize: vertical;
+}
+.feedback-form .form-field input::placeholder,
+.feedback-form .form-field textarea::placeholder {
+    color: #657168;
+    opacity: 1;
+}
+.feedback-form .form-field input:focus-visible,
+.feedback-form .form-field select:focus-visible,
+.feedback-form .form-field textarea:focus-visible {
+    outline: 3px solid #c49a5a;
+    outline-offset: 2px;
+    border-color: #254b3a;
+}
+.feedback-form .button {
+    min-height: 3.1rem;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+}
+.feedback-form .form-status {
+    margin: 0;
+    color: #254b3a;
+    font-weight: 600;
+}
+.feedback-form .form-status:not(:empty) {
+    margin-top: 1.25rem;
+    padding: 0.9rem 1rem;
+    border-left: 3px solid #254b3a;
+    border-radius: 0.3rem;
+    background-color: #eaf0e8;
+    overflow-wrap: anywhere;
+}
+@media (max-width: 35rem) {
+    .feedback-form .button {
+        width: 100%;
+    }
+}
 .video-section { padding-top: 4.5rem; padding-bottom: 4.5rem; }
 .video-section > p:not(.eyebrow), .video-section h2 { max-width: 40rem; }
 .video-player {
@@ -1004,6 +1072,3 @@ tbody tr:nth-child(even) {
 }
 .video-note { margin-top: 0.9rem; color: #657168; font-size: 0.86rem; }
 .video-fallback { margin-top: 1rem; }
-/* Prevent form controls from causing horizontal scrolling on small phones. */
-.feedback-form, .form-field { min-width: 0; }
-.form-field input, .form-field select, .form-field textarea { max-width: 100%; min-width: 0; box-sizing: border-box; }
