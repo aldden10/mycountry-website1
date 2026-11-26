@@ -984,15 +984,10 @@ tbody tr:nth-child(even) {
 .form-status { margin-top: 1rem; color: #254b3a; font-weight: 600; }
 .video-section { padding-top: 4.5rem; padding-bottom: 4.5rem; }
 .video-section > p:not(.eyebrow), .video-section h2 { max-width: 40rem; }
-.video-player { width: 100%; max-width: 60rem; margin-top: 1.5rem; aspect-ratio: 16 / 9; background: #142c22; }
-.video-preview { position: relative; display: block; width: 100%; height: 100%; padding: 0; border: none; cursor: pointer; background: #142c22; }
-.video-preview img { width: 100%; height: 100%; object-fit: cover; }
-.play-symbol { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 4rem; height: 4rem; display: grid; place-items: center; border-radius: 50%; background: #fffdf8; color: #254b3a; font-size: 1.5rem; }
-.video-preview:hover .play-symbol { background: #e4c58e; }
-.video-player iframe { display: block; width: 100%; height: 100%; border: 0; }
+.video-player { width: 100%; max-width: 56rem; margin: 1.5rem auto 0; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 1rem; background: #142c22; box-shadow: 0 1.25rem 3rem rgba(23, 40, 32, 0.18); }
+.video-player video { display: block; width: 100%; height: 100%; object-fit: contain; background: #142c22; }
 .video-note { margin-top: 0.9rem; color: #657168; font-size: 0.86rem; }
 .video-fallback { margin-top: 1rem; }
-@media (prefers-reduced-motion: reduce) { .video-preview .play-symbol { transition: none; } }
 /* Prevent form controls from causing horizontal scrolling on small phones. */
 .feedback-form, .form-field { min-width: 0; }
 .form-field input, .form-field select, .form-field textarea { max-width: 100%; min-width: 0; box-sizing: border-box; }

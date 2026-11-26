@@ -240,19 +240,19 @@
 
         </section>
 
-        <!-- Lightweight video: YouTube loads only after clicking play. -->
+        <!-- Local video with native playback controls. -->
         <section class="video-section section-wrap" aria-labelledby="video-title">
             <p class="eyebrow">Explore more</p>
             <h2 id="video-title">A closer look at Syria</h2>
-            <p>Watch a short video chosen for this project. The player loads only when you press play.</p>
+            <p>Watch the video right here on the page.</p>
             <div class="video-player" id="syria-video">
-                <button class="video-preview" type="button" aria-label="Play Syria video" data-video="xhNiFDLCVFk">
-                    <img src="images/damascus-aerial.webp" width="1800" height="1350" loading="lazy" decoding="async" alt="Aerial view of Damascus, Syria">
-                    <span class="play-symbol" aria-hidden="true">▶</span>
-                </button>
+                <video controls preload="metadata" playsinline width="1920" height="1080" aria-label="A closer look at Syria">
+                    <source src="media/20316963-hd_1920_1080_60fps.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                    <a href="media/20316963-hd_1920_1080_60fps.mp4">Download the video</a>.
+                </video>
             </div>
-            <p class="video-note">This video streams from YouTube after you press play. If playback is unavailable, use the link below.</p>
-            <p class="video-fallback"><a class="button button-dark" href="https://www.youtube.com/watch?v=xhNiFDLCVFk" target="_blank" rel="noopener noreferrer">Watch the video on YouTube</a></p>
+            <p class="video-note">Use the video controls to play, pause, and adjust the volume.</p>
         </section>
 
         <!-- Call to action -->
@@ -297,7 +297,6 @@
 
     </footer>
 
-    <script src="js/video.js" defer></script>
 </body>
 
 </html>
