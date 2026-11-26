@@ -27,6 +27,17 @@ img {
 
 a {
     color: inherit;
+    text-decoration-skip-ink: auto;
+    text-underline-offset: 0.18em;
+}
+
+a:hover {
+    text-decoration-thickness: 0.13em;
+}
+
+a:focus {
+    outline: 3px solid #c49a5a;
+    outline-offset: 4px;
 }
 
 a:focus-visible,
@@ -82,13 +93,11 @@ audio:focus-visible {
     letter-spacing: 2px;
 }
 
-.brand strong {
-    color: #254b3a;
-}
-
 .brand-mark {
+    display: block;
     width: 112px;
-    height: 76px;
+    height: auto;
+    aspect-ratio: 600 / 407;
     flex: 0 0 112px;
     object-fit: contain;
 }
@@ -129,7 +138,8 @@ nav {
     align-items: center;
     min-height: 590px;
     background-color: #33483d;
-background-image: url("../images/AA-20241208-36426003-36425996-CROWDS_GATHER_AT_UMAYYAD_MOSQUE_FOLLOWING_THE_COLLAPSE_OF_61YEAR_OF_BAATH_PARTY_RULE_IN_SYRIA.jpg");    background-position: center;
+    background-image: url('../images/damascus-aerial.webp');
+    background-position: center;
     background-size: cover;
     color: white;
 }
@@ -185,6 +195,7 @@ h1 {
 
 h1 em,
 h2 em {
+    display: block;
     color: #c49a5a;
     font-weight: 500;
 }
@@ -364,7 +375,7 @@ h2 {
 .feature-image {
     min-height: 310px;
     background-color: #9a9b81;
-    background-image: url('..//images/IMG_0808.jpeg');
+    background-image: url('../images/umayyad-mosque.webp');
     background-position: center;
     background-size: cover;
 }
@@ -465,10 +476,6 @@ h2 {
     margin-bottom: 0;
 }
 
-.footer-inner > a:not(.footer-brand) {
-    color: #e4c58e;
-}
-
 .copyright {
     color: rgba(255, 255, 255, 0.45);
 }
@@ -498,11 +505,11 @@ h2 {
 }
 
 .heritage-hero {
-    background-image: url('../images/syrias-ancient-city-of-busra-remains-a-remarkable-crossroads-of-civilizations-3210700.jpg');
+    background-image: url('../images/busra-ruins.webp');
 }
 
 .journey-hero {
-    background-image: url('https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1800&q=80');
+    background-image: url('../images/palmyra-ruins.webp');
 }
 
 .page-hero-content {
@@ -826,6 +833,11 @@ tbody tr:nth-child(even) {
         padding: 18px 0;
     }
 
+    .brand-mark {
+        width: 128px;
+        flex-basis: 128px;
+    }
+
     nav {
         width: auto;
     }
@@ -934,59 +946,53 @@ tbody tr:nth-child(even) {
     }
 }
 
-/* Shared keyboard and mouse link states */
-a:hover {
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.2em;
+/* Additional accessible page and form styles. */
+.quote-heading {
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
-a:focus-visible {
-    outline: 3px solid #c49a5a;
-    outline-offset: 4px;
+.places-title {
+    margin-bottom: 2rem;
+    font-size: clamp(2rem, 4vw, 3rem);
 }
-
-/* Credits page and feedback form */
-.quote-heading, .places-heading {
-    font-size: clamp(1.35rem, 3vw, 2rem);
-    line-height: 1.3;
-    margin: 0 0 1.5rem;
-}
-.credits-list {
-    padding-left: 1.5rem;
-    line-height: 1.9;
-}
-.feedback-form {
-    max-width: 40rem;
-}
-.form-field {
-    display: flex;
-    flex-direction: column;
-    gap: .4rem;
-    margin-bottom: 1.25rem;
-}
-.form-field label {
-    font-weight: 700;
-}
+.footer-credits { color: #e4c58e; }
+.footer-credits:hover { color: white; }
+.credits-hero { background-image: url('../images/historic-damascus.webp'); }
+.credits-section { padding: 4.5rem 0; background: #f6f3ec; }
+.credits-section h2 { margin-bottom: 1.5rem; }
+.credits-list { padding-left: 1.5rem; line-height: 2; }
+.credits-list a { color: #254b3a; }
+.credits-list a:hover { color: #85551f; }
+.feedback-form { max-width: 40rem; margin-top: 2rem; }
+.form-field { margin-bottom: 1.25rem; }
+.form-field label { display: block; margin-bottom: 0.5rem; font-weight: 700; }
+.optional { font-weight: 400; color: #657168; }
 .form-field input,
 .form-field select,
 .form-field textarea {
+    display: block;
     width: 100%;
-    padding: .75rem;
-    font: inherit;
-    color: inherit;
-    border: 1px solid #68756b;
-    border-radius: .25rem;
+    min-height: 2.9rem;
+    padding: 0.7rem;
+    border: 1px solid #8b998e;
+    border-radius: 0.2rem;
     background: #fff;
+    color: #172820;
+    font: inherit;
 }
-.form-field textarea {
-    resize: vertical;
-}
-#form-status:not(:empty) {
-    margin-top: 1rem;
-    padding: 1rem;
-    border-left: 3px solid #254b3a;
-    background-color: #e9eee7;
-    overflow-wrap: anywhere;
-}
-.footer-credits {
-    color: inherit;
-}
+.form-field textarea { resize: vertical; }
+.form-status { margin-top: 1rem; color: #254b3a; font-weight: 600; }
+.video-section { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+.video-section > p:not(.eyebrow), .video-section h2 { max-width: 40rem; }
+.video-player { width: 100%; max-width: 60rem; margin-top: 1.5rem; aspect-ratio: 16 / 9; background: #142c22; }
+.video-preview { position: relative; display: block; width: 100%; height: 100%; padding: 0; border: none; cursor: pointer; background: #142c22; }
+.video-preview img { width: 100%; height: 100%; object-fit: cover; }
+.play-symbol { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 4rem; height: 4rem; display: grid; place-items: center; border-radius: 50%; background: #fffdf8; color: #254b3a; font-size: 1.5rem; }
+.video-preview:hover .play-symbol { background: #e4c58e; }
+.video-player iframe { display: block; width: 100%; height: 100%; border: 0; }
+.video-note { margin-top: 0.9rem; color: #657168; font-size: 0.86rem; }
+.video-fallback { margin-top: 1rem; }
+@media (prefers-reduced-motion: reduce) { .video-preview .play-symbol { transition: none; } }
+/* Prevent form controls from causing horizontal scrolling on small phones. */
+.feedback-form, .form-field { min-width: 0; }
+.form-field input, .form-field select, .form-field textarea { max-width: 100%; min-width: 0; box-sizing: border-box; }

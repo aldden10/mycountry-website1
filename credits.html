@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Media credits, sources and a feedback form for the Discover Syria student project.">
+    <meta name="description" content="Credits and contact form for the Discover Syria student website.">
     <title>Credits and Contact | Discover Syria</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon.ico" sizes="any">
+    <link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,44 +17,63 @@
     <header class="site-header">
         <div class="nav-wrap">
             <a class="brand" href="index.html" aria-label="Discover Syria home">
-                <img class="brand-mark" src="images/syria-logo.svg" alt="" width="600" height="407">
+                <img class="brand-mark" src="images/syria-logo.svg" alt="" width="600" height="407" loading="eager" decoding="async">
             </a>
             <nav aria-label="Main navigation">
                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="heritage.html">Heritage</a></li>
-                    <li><a href="journey.html">Places and Flavours</a></li>
-                    <li><a class="active" aria-current="page" href="credits.html">Credits &amp; contact</a></li>
+                    <li><a href="journey.html">Places and flavours</a></li>
+                    <li><a href="credits.html" aria-current="page" class="active">Credits & contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main id="main-content">
-        <section class="section-wrap content-section" aria-labelledby="page-title">
-            <p class="eyebrow">Project information</p>
-            <h1 id="page-title">Credits and contact</h1>
-            <p>Discover Syria is a student website about the country's history, culture, places, and food.</p>
+        <section class="page-hero credits-hero" aria-labelledby="credits-heading">
+            <div class="page-hero-content">
+                <p class="eyebrow">04 / Credits and contact</p>
+                <h1 id="credits-heading">Behind the project</h1>
+                <p>How this student project was built, the artwork it uses, and a way to leave feedback.</p>
+            </div>
         </section>
-        <section class="section-wrap content-section" aria-labelledby="credits-title">
-            <h2 id="credits-title">Image and media credits</h2>
-            <p>The Syrian eagle SVG was provided for this project. Other photographs and audio appear in the project assets. Original creator names and licences must be verified before redistributing these assets.</p>
-            <ul class="credits-list">
-                <li><a href="images/syria-logo.svg">Eagle artwork</a> — supplied project vector</li>
-                <li><a href="images/1fff691c-3b12-4921-ae96-12c8b2ab3d44.jpg">Historic Damascus photo</a> — creator and licence to be confirmed</li>
-                <li><a href="images/syrias-ancient-city-of-busra-remains-a-remarkable-crossroads-of-civilizations-3210700.jpg">Busra photo</a> — creator and licence to be confirmed</li>
-                <li><a href="media/badr.mp3">Heritage page audio</a> — creator and licence to be confirmed</li>
-            </ul>
+
+        <section class="section-wrap content-section" aria-labelledby="about-project">
+            <p class="eyebrow">About this website</p>
+            <h2 id="about-project">Made to share Syria's stories</h2>
+            <p>This four-page website was built as a front-end development student project using HTML, CSS, and a little JavaScript. The pages introduce Syria's history, cultural traditions, places, and food.</p>
+            <p>The eagle logo is the original vector artwork provided for this project. The favicon uses the same eagle design.</p>
         </section>
-        <section class="section-wrap content-section" aria-labelledby="feedback-title">
-            <h2 id="feedback-title">Share your feedback</h2>
-            <p>This demonstration form displays your response on this page. It does not send emails or save information to a server.</p>
-            <form id="feedback-form" class="feedback-form">
+
+        <section class="credits-section" aria-labelledby="sources-heading">
+            <div class="section-wrap">
+                <p class="eyebrow">Image and media credits</p>
+                <h2 id="sources-heading">Artwork and resources</h2>
+                <p>These are the media files used throughout the site. Verify original photographer and license details before publishing the photos outside this student project.</p>
+                <ul class="credits-list">
+                    <li><a href="images/syria-logo.svg">Original Syrian eagle vector</a> — artwork supplied for this project</li>
+                    <li><a href="images/damascus-aerial.webp">Damascus aerial photograph</a> — homepage background and video preview</li>
+                    <li><a href="images/umayyad-mosque.webp">Umayyad Mosque photograph</a> — homepage feature</li>
+                    <li><a href="images/historic-damascus.webp">Historic Damascus photograph</a> — heritage page</li>
+                    <li><a href="images/busra-ruins.webp">Busra ruins photograph</a> — heritage page background</li>
+                    <li><a href="images/palmyra-ruins.webp">Palmyra ruins photograph</a> — places page background</li>
+                    <li><a href="media/badr.mp3">Original ambient audio</a> — heritage page</li>
+                    <li><a href="https://www.youtube.com/watch?v=Ak0NqU7WnsU">Syria video on YouTube</a> — embedded on the homepage, streamed only on play</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-wrap content-section" aria-labelledby="feedback-heading">
+            <p class="eyebrow">Share your thoughts</p>
+            <h2 id="feedback-heading">What would you like to explore?</h2>
+            <p>This is a demonstration form for the class project. Your answer appears locally on this page, outside of server storage.</p>
+            <form class="feedback-form" id="feedback-form">
                 <div class="form-field">
-                    <label for="visitor-name">Your name (optional)</label>
-                    <input id="visitor-name" name="visitor-name" type="text" autocomplete="name" maxlength="60">
+                    <label for="visitor-name">Your name <span class="optional">(optional)</span></label>
+                    <input id="visitor-name" name="visitor-name" type="text" autocomplete="name" maxlength="60" placeholder="Your name">
                 </div>
                 <div class="form-field">
-                    <label for="visitor-topic">Which subject interests you most?</label>
+                    <label for="visitor-topic">Which topic interests you most?</label>
                     <select id="visitor-topic" name="visitor-topic" required>
                         <option value="">Choose a topic</option>
                         <option value="Heritage and culture">Heritage and culture</option>
@@ -61,17 +83,17 @@
                 </div>
                 <div class="form-field">
                     <label for="visitor-message">Your feedback</label>
-                    <textarea id="visitor-message" name="visitor-message" rows="4" maxlength="500" required></textarea>
+                    <textarea id="visitor-message" name="visitor-message" rows="4" maxlength="500" required placeholder="Share an idea for this website"></textarea>
                 </div>
                 <button class="button button-dark" type="submit">Show my feedback</button>
-                <p id="form-status" role="status" aria-live="polite"></p>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
             </form>
         </section>
     </main>
     <footer class="site-footer">
         <div class="footer-inner">
             <a class="footer-brand" href="index.html">Discover Syria</a>
-            <a class="footer-credits" href="credits.html">Credits &amp; contact</a>
+            <a class="footer-credits" href="credits.html">Credits & contact</a>
             <p>A student project exploring Syria's history, culture, food, and traditions.</p>
             <span class="copyright">© 2026 · FWDP 1000</span>
         </div>

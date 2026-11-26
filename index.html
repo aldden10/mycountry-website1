@@ -13,8 +13,12 @@
 
     <title>Discover Syria | A Land of Stories</title>
 
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    
 
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon.ico" sizes="any">
+    <link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -35,35 +39,23 @@
                 aria-label="Discover Syria home"
             >
                 <img
-                    class="brand-mark"
-                    src="images/syria-logo.svg"
-                    alt=""
+                   class="brand-mark"
+                   src="images/syria-logo.svg"
+                   alt=""
+                   width="600"
+                   height="407"
+                   loading="eager"
+                   decoding="async"
                 >
             </a>
 
             <nav aria-label="Main navigation">
-
                 <ul class="nav-list">
-                    <li>
-                        <a
-                            class="active"
-                            aria-current="page"
-                            href="index.html"
-                        >
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="heritage.html">Heritage</a>
-                    </li>
-
-                    <li>
-                        <a href="journey.html">Places and Flavours</a>
-                    </li>
-                    <li><a href="credits.html">Credits &amp; contact</a></li>
+                    <li><a href="index.html" aria-current="page" class="active">Home</a></li>
+                    <li><a href="heritage.html">Heritage</a></li>
+                    <li><a href="journey.html">Places and flavours</a></li>
+                    <li><a href="credits.html">Credits & contact</a></li>
                 </ul>
-
             </nav>
 
         </div>
@@ -82,7 +74,7 @@
                 <p class="eyebrow">Discover the heart of the Levant</p>
 
                 <h1>
-                    Discover Syria. 
+                    Discover Syria.
                     <em>A country full of stories.</em>
                 </h1>
 
@@ -110,7 +102,7 @@
         <section class="intro section-wrap">
 
             <div class="section-label">
-                <span>01</span> GET TO KNOW SYRIA
+                <span>01</span> Get to know Syria
             </div>
 
             <div class="intro-grid">
@@ -118,7 +110,7 @@
                 <div>
 
                     <h2>
-                        A country where 
+                        A country where
                         <em>cultures come together.</em>
                     </h2>
 
@@ -212,7 +204,7 @@
                 <p class="eyebrow">Explore Damascus</p>
 
                 <h2>
-                    Damascus: 
+                    Damascus:
                     <em>a city full of history.</em>
                 </h2>
 
@@ -233,10 +225,10 @@
         </section>
 
         <!-- Featured quote -->
-        <section class="quote-section section-wrap" aria-labelledby="quote-heading">
+        <section class="quote-section section-wrap" aria-labelledby="quote-title">
 
             <p class="eyebrow">A thought to remember</p>
-            <h2 id="quote-heading" class="quote-heading">Stories that stay with us</h2>
+            <h2 id="quote-title" class="quote-heading">Stories worth remembering</h2>
 
             <blockquote>
                 "A place lives on through the stories its people continue to tell."
@@ -248,6 +240,21 @@
 
         </section>
 
+        <!-- Lightweight video: YouTube loads only after clicking play. -->
+        <section class="video-section section-wrap" aria-labelledby="video-title">
+            <p class="eyebrow">Explore more</p>
+            <h2 id="video-title">A closer look at Syria</h2>
+            <p>Watch a short video chosen for this project. The player loads only when you press play.</p>
+            <div class="video-player" id="syria-video">
+                <button class="video-preview" type="button" aria-label="Play Syria video" data-video="Ak0NqU7WnsU">
+                    <img src="images/damascus-aerial.webp" width="1800" height="1350" loading="lazy" decoding="async" alt="Aerial view of Damascus, Syria">
+                    <span class="play-symbol" aria-hidden="true">▶</span>
+                </button>
+            </div>
+            <p class="video-note">This video streams from YouTube after you press play. If playback is unavailable, use the link below.</p>
+            <p class="video-fallback"><a class="button button-dark" href="https://www.youtube.com/watch?v=Ak0NqU7WnsU" target="_blank" rel="noopener noreferrer">Watch the video on YouTube</a></p>
+        </section>
+
         <!-- Call to action -->
         <section class="closing-cta">
 
@@ -256,7 +263,7 @@
                 <p class="eyebrow">Start exploring</p>
 
                 <h2>
-                    There's more to discover. 
+                    There's more to discover.
                     <em>Let's explore together.</em>
                 </h2>
 
@@ -276,16 +283,13 @@
 
         <div class="footer-inner">
 
-            <a class="footer-brand" href="index.html">
-                DISCOVER SYRIA
-            </a>
+            <a class="footer-brand" href="index.html">Discover Syria</a>
+            <a class="footer-credits" href="credits.html">Credits & contact</a>
 
             <p>
                 A student project exploring Syria's history,
                 culture, food, and traditions.
             </p>
-
-            <a class="footer-credits" href="credits.html">Credits &amp; contact</a>
 
             <span class="copyright">© 2026 · FWDP 1000</span>
 
@@ -293,6 +297,7 @@
 
     </footer>
 
+    <script src="js/video.js" defer></script>
 </body>
 
 </html>
