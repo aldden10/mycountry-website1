@@ -818,7 +818,7 @@ tbody tr:nth-child(even) {
 
 /* TABLET AND DESKTOP */
 
-@media (min-width: 700px) {
+@media (min-width: 43.75em) {
     .nav-wrap {
         flex-direction: row;
         align-items: center;
@@ -909,7 +909,7 @@ tbody tr:nth-child(even) {
 
 /* WIDE DESKTOP */
 
-@media (min-width: 1100px) {
+@media (min-width: 68.75em) {
     .place-grid {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -932,4 +932,61 @@ tbody tr:nth-child(even) {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
     }
+}
+
+/* Shared keyboard and mouse link states */
+a:hover {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+}
+a:focus-visible {
+    outline: 3px solid #c49a5a;
+    outline-offset: 4px;
+}
+
+/* Credits page and feedback form */
+.quote-heading, .places-heading {
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    line-height: 1.3;
+    margin: 0 0 1.5rem;
+}
+.credits-list {
+    padding-left: 1.5rem;
+    line-height: 1.9;
+}
+.feedback-form {
+    max-width: 40rem;
+}
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    margin-bottom: 1.25rem;
+}
+.form-field label {
+    font-weight: 700;
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: .75rem;
+    font: inherit;
+    color: inherit;
+    border: 1px solid #68756b;
+    border-radius: .25rem;
+    background: #fff;
+}
+.form-field textarea {
+    resize: vertical;
+}
+#form-status:not(:empty) {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-left: 3px solid #254b3a;
+    background-color: #e9eee7;
+    overflow-wrap: anywhere;
+}
+.footer-credits {
+    color: inherit;
 }

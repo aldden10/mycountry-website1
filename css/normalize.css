@@ -1,0 +1,10 @@
+/* Basic local CSS reset for consistent default styles */
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+main { display: block; }
+*, *::before, *::after { box-sizing: border-box; }
+img, picture, video { max-width: 100%; height: auto; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+textarea { overflow: auto; }
+[hidden] { display: none !important; }
