@@ -20,7 +20,7 @@
     <link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=video-size-fix-2">
 </head>
 
 <body>
@@ -245,8 +245,8 @@
             <p class="eyebrow">Explore more</p>
             <h2 id="video-title">A closer look at Syria</h2>
             <p>Watch the video right here on the page.</p>
-            <div class="video-player" id="syria-video">
-                <video controls preload="metadata" playsinline width="1920" height="1080" aria-label="A closer look at Syria">
+            <div class="video-player" id="syria-video" style="width: 100%; max-width: 720px; margin-left: auto; margin-right: auto;">
+                <video controls preload="metadata" playsinline width="720" height="405" style="display: block; width: 100%; height: auto; aspect-ratio: 16 / 9;" aria-label="A closer look at Syria">
                     <source src="media/20316963-hd_1920_1080_60fps.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                     <a href="media/20316963-hd_1920_1080_60fps.mp4">Download the video</a>.
